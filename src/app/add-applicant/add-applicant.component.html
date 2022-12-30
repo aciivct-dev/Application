@@ -1,0 +1,75 @@
+
+  <table border="2px solid balck">
+    <tr>
+      <td>Applicant Name</td>
+      <td><input type="text" [(ngModel)]="applicantDetails.name" placeholder="Enter The Name" /></td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><input type="text"  [(ngModel)]="applicantDetails.address" placeholder="Address" /></td>
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><input type="date" [(ngModel)]="applicantDetails.dob" placeholder="Date Of Birth" /></td>
+    </tr>
+    <!-- <tr>
+      <td>Age</td>
+      <td><input type="number" [(ngModel)]="applicantDetails.age" placeholder="Age" /></td>
+    </tr> -->
+    <tr>
+      <td>Gender</td>
+      <td>
+       
+        <input type="radio" [(ngModel)]="applicantDetails.gender" name="gender" id="male" value="male" checked />
+        <label for="male">Male</label>
+        <input type="radio" [(ngModel)]="applicantDetails.gender" name="gender" id="female" value="female" />
+        <label for="female">Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="email" [(ngModel)]="applicantDetails.email" placeholder="Email" /></td>
+    </tr>
+    <tr>
+      <td>Mobile</td>
+      <td><input type="tel" [(ngModel)]="applicantDetails.mobile" placeholder="Mobile" /></td>
+    </tr>
+    <tr>
+      <td>Aadhar Number</td>
+      <td><input type="password" [(ngModel)]="applicantDetails.aadhar_no" placeholder="Aadhar No" /></td>
+    </tr>
+    <tr>
+      <td>Pancard Number</td>
+      <td><input type="password" [(ngModel)]="applicantDetails.pancard" placeholder="Pancard" /></td>
+    </tr>
+    <tr>
+      <td>Amount Required</td>
+      <td><input type="text" [(ngModel)]="applicantDetails.amount_req" placeholder="Amount Required" /></td>
+    </tr>
+    <td>House Type</td>
+    <td>
+      
+      <input type="radio" [(ngModel)]="applicantDetails.house_type" name="House" id="Own" value="Own" checked />
+      <label for="Own">Own</label>
+      <input type="radio" [(ngModel)]="applicantDetails.house_type" name="House" id="Rented" value="Rented" />
+      <label for="Rented">Rented</label>
+    </td>
+    <tr>
+      <td>Employee Type</td>
+      <td>
+       
+        <input type="radio" [(ngModel)]="applicantDetails.employee_type" name="Occupation" id="Salaried" value="Salaried" checked />
+        <label for="Salaried">Salaried</label>
+        
+        <input type="radio" [(ngModel)]="applicantDetails.employee_type" name="Occupation" id="Self" value="Self" />
+        <label for="Self">Self Employee</label>
+      
+        <input type="radio" [(ngModel)]="applicantDetails.employee_type" name="Occupation" id="Others" value="Others" />
+        <label for="Rented">Others</label>
+      </td>
+    </tr>
+  </table>
+  <br />
+  <!-- <input type="submit" value="Submit">     -->
+  <button (click)="addApplicant()">Apply</button>
+

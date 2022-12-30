@@ -1,0 +1,32 @@
+{
+  "applicants": [
+    {
+      "name": "qwertyu",
+      "address": "qwertyu",
+      "dob": "",
+      "gender": "",
+      "email": "",
+      "mobile": "",
+      "aadhar_no": "MTExMTExMTExMTExMTE=",
+      "pancard": "MTExMTExMTExMTExMQ==",
+      "amount_req": "",
+      "house_type": "",
+      "employee_type": "",
+      "id": 3
+    },
+    {
+      "name": "asdfghjkl",
+      "address": "",
+      "dob": "",
+      "gender": "",
+      "email": "",
+      "mobile": "",
+      "aadhar_no": "MTIzNA==",
+      "pancard": "MTIzNDU=",
+      "amount_req": "",
+      "house_type": "",
+      "employee_type": "",
+      "id": 4
+    }
+  ]
+}

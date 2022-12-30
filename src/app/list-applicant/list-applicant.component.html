@@ -1,0 +1,59 @@
+<div *ngIf="Applicant.length == 0">
+  <h3 class="mb-3 text-center">No Applicant's</h3>
+  <button routerLink="/Add">Add Applicant</button>
+</div>
+<div *ngIf="Applicant.length != 0">
+  <h3 class="mb-3 text-center">Applicant's List</h3>
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Dob</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile Number</th>
+          <th scope="col">Aadhar Number</th>
+          <th scope="col">Pancard</th>
+          <th scope="col">Amount Required</th>
+          <th scope="col">House Type</th>
+          <th scope="col">Employeed type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let people of Applicant">
+          <td>{{ people.id }}</td>
+          <td>{{ people.name }}</td>
+          <td>{{ people.address }}</td>
+          <td>{{ people.dob }}</td>
+          <td>{{ people.dob|age}}</td>
+          <td>{{ people.gender }}</td>
+          <td>{{ people.email }}</td>
+          <td>{{ people.mobile }}</td>
+          <td>{{ people.aadhar_no }}</td>
+          <td>{{ people.pancard }}</td>
+          <td>{{ people.amount_req }}</td>
+          <td>{{ people.house_type }}</td>
+          <td>{{ people.employee_type }}</td>
+
+          <td>
+            <button routerLink="/Edit" [queryParams]="{ id: people.id }">
+              Edit
+            </button>
+          </td>
+          <td>
+            <button (click)="deleteApplicant(people.id)">Delete</button>
+          </td>
+
+          <!-- <td>
+        <span class="edit" routerLink="/people-changes/"" [queryParams]={{id:people.id}}>Edit</span>
+        <span class="delete" (click)="updatepeople()">Delete</span>
+        </td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
